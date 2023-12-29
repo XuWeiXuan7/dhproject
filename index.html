@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/10.2.0/swiper-bundle.js"></script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+
+<body>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="ma_nr animate__animated animate__backInDown boaa">
+                    <p></p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ma_nr1 animate__animated"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ma_nr2 animate__animated ">
+                    <p>
+                        ONE OF THE top concerns when it comes to the harms of social media and political polarization in
+                        the United States is the fear of echo chambers or people operating in media bubbles. If people
+                        are only hearing opinions they already agree with or seeing stories that align with their
+                        worldview, they may become more entrenched in their beliefs, whether or not their beliefs
+                        reflect the real world. They may also become easier to manipulate and more extreme.
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="swiper-slide">
+                <div class="ma_nr3 animate__animated animate__fadeIn">
+                    <p>
+                        ONE OF THE top concerns when it comes to the harms of social media and political polarization in
+                        the United States is the fear of echo chambers or people operating in media bubbles. If people
+                        are only hearing opinions they already agree with or seeing stories that align with their
+                        worldview, they may become more entrenched in their beliefs, whether or not their beliefs
+                        reflect the real world. They may also become easier to manipulate and more extreme.
+                    </p>
+                </div>
+            </div> -->
+            <div class="swiper-slide">
+                <div class="ma_nr3 animate__animated animate__fadeIn">
+                    <p>
+                        Interestingly, research largely shows the vast majority of people don’t inhabit perfectly
+                        sealed-off echo chambers. It’s been found that only about 4 percent of people operate in online
+                        echo chambers, and most people on Twitter, for example, don’t follow any political accounts.
+                    </p>
+                    <div class="xr" @click="progressStart"></div>
+                    <div class="progress">
+                        <el-progress :percentage="progressNum" :stroke-width="26"></el-progress>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide box1">
+                <div class="ma_nr5 animate__animated ">
+                    <div class="nr5_up animate__animated">
+                        <img src="./img/2-remove.png" alt="" class="box5">
+                        <span>Magdalena Wojcieszak, a professor of communication at the University of California, Davis.
+                        </span>
+                        <audio id="myAudio2" src="./img/1.mp3"></audio>
+                        <el-popover trigger="click" :content="pageNum%2==0?neir[0]:neir[1]" placement="right-start"
+                            width="400" v-model="visible">
+                            <el-button slot="reference" class="nr5_down" @click="duihua">激活</el-button>
+                        </el-popover>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="ma_nr6">
+                    <p>
+                        Essentially, most people aren’t following politics, and a lot of people who do are getting at
+                        least a little bit of information from different sides of the political spectrum. That said,
+                        echo chambers and media bubbles are an issue because they can radicalize people, negatively
+                        affect the people who inhabit them, and distort the broader political landscape.
+                        Wojcieszak says because these people are so politically involved, they have a disproportionate
+                        influence on American politics. They’re often the loudest voices in the room.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide ma_nr8">
+                <p>She says people who are politically active like to have their views confirmed, so they can end up
+                    following accounts that align with their views and end up in echo chambers. Social media makes it
+                    easier to find people who align with them politically, and algorithms often feed them the content
+                    they’re going to like. All of this can ultimately lead to people going down rabbit holes and
+                    becoming more politically extreme.
+                    “It makes you more extreme or polarized. It reinforces your attitudes. It also reinforces your sense
+                    of belonging to this group, and it reinforces your negativity and hostility toward other groups,”
+                    Wojcieszak says. “You think you’re the legitimate one, the good one, the virtuous one. The others
+                    are evil.”
+                    People can start to believe they’re the only ones with the facts and that the other side is
+                    illegitimate. (Perhaps you’ve seen this in a person who paid tens of billions of dollars for a
+                    social media company not long ago.) Wojcieszak says the process of people becoming radicalized can
+                    start with them having just a few political views in common with those who are more extreme than
+                    they are. Having a few stances that align with these extreme actors online can be the snare that
+                    pulls them into the rabbit hole.</p>
+                <audio id="myAudio" src="./img/2.mp3"></audio>
+                <div class="nr8_img">
+                </div>
+            </div>
+            <div class="swiper-slide box2">
+                <div style="width: 40%;font-size: 35px;color: #fff;">
+                    <p v-if="isflag">
+                        “In order to enter that process of this individual psychological and algorithmic confirmation,
+                        you do need to have some extent of susceptibility to some sort of narratives from the left or
+                        the right,” Wojcieszak says. “If there are some social or political issues in which you have
+                        some views, that can start the process.”
+                        You can imagine someone who isn’t particularly politically extreme but does harbor certain fears
+                        about ways the country is changing being pulled in by extremists and becoming extreme themselves
+                        as they get increasingly embedded in that community. People need community, and extremists can
+                        give them that. They’ll be welcomed by this community, Wojcieszak says, and they’ll feel the
+                        psychological need to start going along with whatever that community’s narrative is on any
+                        number of issues.
+                    </p>
+                </div>
+                <div class="ma_nr6 animate__animated"
+                    style="display: flex; justify-content: space-between;flex-direction: row;">
+                    <div class="nr6_up animate__animated">
+                        <img src="./img/2-remove.png" alt="" @click="isflagClick">
+                        <audio id="myAudio1" src="./img/1.mp3"></audio>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="ma_nr6">
+                    <p>
+                        Essentially, most people aren’t following politics, and a lot of people who do are getting at
+                        least a little bit of information from different sides of the political spectrum. That said,
+                        echo chambers and media bubbles are an issue because they can radicalize people, negatively
+                        affect the people who inhabit them, and distort the broader political landscape.
+                        Wojcieszak says because these people are so politically involved, they have a disproportionate
+                        influence on American politics. They’re often the loudest voices in the room.
+                    </p>
+                </div>
+            </div>
+
+            <div class="swiper-slide ma_nr9">
+                <p>Mike Gruszczynski, an assistant professor of communication science at Indiana University, says a
+                    distrust in institutions, such as news media and the government</p>
+
+                <div class="nr9_img">
+                </div>
+            </div>
+            <div class="swiper-slide ma_nr10" style="font-size: 20px;">
+                <div class="nr10_img">
+                </div>
+                <p>Mike Gruszczynski, an assistant professor of communication science at Indiana University, says a
+                    distrust in institutions, such as news media and the government, can lead to people creating echo
+                    chambers and often falling for disinformation because it appeals to their political beliefs. He says
+                    this has been found to be more common on the political right than the political left.
+
+                    “You have a lot of people on the right wing of the political spectrum who have been highly
+                    distrustful of traditional journalism for quite a while,” Gruszczynski says. “Not only are they
+                    distrustful of it, but they exist in a kind of feedback loop where their chosen leaders tell them
+                    that the things that come out of the media are false or biased.”
+                    One of the ways society can help prevent people from going down these rabbit holes and becoming more
+                    extreme is by teaching them media literacy. Gruszczynski says it won’t necessarily be easy to do,
+                    especially because there’s so much disinformation out there and it’s often quite convincing. But
+                    it’d be worth the effort. “Everyone kind of has to be their own detective in a way now,”
+                    Gruszczynski says.
+
+                </p>
+            </div>
+            <div class="swiper-slide ma_nr11">
+                <div class="nr11">
+                    <img src="./img/bd-remove.png" alt="" class="dom">
+                </div>
+                <p class="flag box3">In the US, things have gotten so deeply bad for some
+                    groups. The people who are,
+                    say,
+                    true
+                    Trump
+                    believers or who are convinced Covid was a hoax—I’m not sure if you can deprogram them,”
+                    Wojcieszak
+                    says.</p>
+            </div>
+            <div class="swiper-slide ma_nr12">
+                <div class="nr12">
+                </div>
+                <div class="nr12-box">
+                    <img src="./img/sz.png" alt="" style="width: 300px; height: 300px;" class="animate__animated  box4">
+                    <p>It often feels like an insurmountable challenge, Wojcieszak says, because those who have become
+                        politically extreme are living in such a different reality than the rest of the populace. If
+                        someone
+                        is spending most of their time on extremist forums or in extreme groups on social media, for
+                        example, it’s hard to reach them and bring them back to reality. She says improving social media
+                        algorithms so these platforms are less likely to make people more extreme in the first place
+                        could
+                        be a good place to start when it comes to attacking this problem.
+
+                        “In the US, things have gotten so deeply bad for some groups. The people who are, say, true
+                        Trump
+                        believers or who are convinced Covid was a hoax—I’m not sure if you can deprogram them,”
+                        Wojcieszak
+                        says.
+                        Society may not be able to pull everyone out of these rabbit holes, but increased media literacy
+                        and
+                        social media platforms that aren’t designed to confirm people’s existing beliefs and make them
+                        more
+                        extreme could help fewer people become radicalized. It’s a widespread problem that will take
+                        time to
+                        address, but the status quo does not seem sustainable.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+</body>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="./js/index.js" async> </script>
+<script>
+    new Vue({
+        el: '.swiper',
+        data () {
+            return {
+                progressNum: 0,
+                visible: false,
+                visibles: false,
+                pageNum: 0,
+                pageNum1: 0,
+                neir: ['The subset of the population that does consume hyper-partisan media and inhabit echo chambers on social platforms is very consequential,” “It makes you more extreme or polarized. It reinforces your attitudes. It also reinforces your sense of belonging to this group, and it reinforces your negativity and hostility toward other groups,” “You think you’re the legitimate one, the good one, the virtuous one. The others are evil.', 'They’re more politically interested, more participatory, more strongly partisan, and more polarized. Because of all these things, they’re more likely to take part in politics..', ''],
+                neir1: ['People can start to believe they’re the only ones with the facts and that the other side is illegitimate. (Perhaps you’ve seen this in a person who paid tens of billions of dollars for a social media company not long ago.) Wojcieszak says the process of people becoming radicalized can start with them having just a few political views in common with those who are more extreme than they are. Having a few stances that align with these extreme actors online can be the snare that pulls them into the rabbit hole.', 'In order to enter that process of this individual psychological and algorithmic confirmation, you do need to have some extent of susceptibility to some sort of narratives from the left or the right,” Wojcieszak says. “If there are some social or political issues in which you have some views, that can start the process.'],
+                flag: false,
+                isflag: false
+            }
+        },
+        methods: {
+            duihua () {
+                console.log('触发了', this.visible);
+                this.pageNum += 1
+                if (this.pageNum % 3 == 0) {
+                    this.$nextTick(() => {
+                        this.visible = true
+                    })
+                } else {
+                    this.$nextTick(() => {
+                        this.visible = false
+                    })
+                }
+
+            },
+            duihua1 () {
+                this.pageNum1 += 1
+                if (this.pageNum1 % 3 == 0) {
+                    this.$nextTick(() => {
+                        this.visibles = true
+                    })
+                } else {
+                    this.$nextTick(() => {
+                        this.visibles = false
+                    })
+                }
+            },
+            isflagClick () {
+                this.isflag = !this.isflag
+            },
+            progressStart () {
+                let timer = setInterval(() => {
+                    this.progressNum = 4
+                    if (this.progressNum >= 100) {
+                        this.progressNum = 100
+                        clearInterval(timer)
+                    }
+
+                }, 1000);
+            },
+            format () {
+                return this.progressNum === 100 ? '完成' : `${this.progressNum}%`
+            },
+            dialogue () {
+
+            }
+        },
+    })
+</script>
+
+</html>
